@@ -1,0 +1,79 @@
+trigger: none
+
+pr: none
+
+variables:
+  - name: imageRepository
+    value: devmojo/litefolio
+  - name: containerRegistry
+    value: dockerhub
+
+jobs:
+  - job: ExtractVersion
+    displayName: Extract Version
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - task: PowerShell@2
+        displayName: Extract Version
+        name: extractVersion
+        inputs:
+          targetType: inline
+          script: |
+            $version = Get-Content 'VERSION'
+            $buildNumber = $(Build.BuildNumber)
+            $fullVersion = "${version}.${buildNumber}"
+            Write-Host "##vso[task.setvariable variable=version]$version"
+            Write-Host "##vso[task.setvariable variable=fullVersion]$fullVersion"
+            Write-Host "##vso[task.setvariable variable=version;isOutput=true]$version"
+            Write-Host "##vso[task.setvariable variable=fullVersion;isOutput=true]$fullVersion"
+            Write-Host "##vso[build.updatebuildnumber]$fullVersion"
+  - job: BuildAmd64
+    displayName: Build AMD64
+    dependsOn:
+      - ExtractVersion
+    variables:
+      fullVersion: $[ dependencies.ExtractVersion.outputs['extractVersion.fullVersion'] ]
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - task: Docker@2
+        inputs:
+          command: login
+          containerRegistry: $(containerRegistry) 
+        displayName: Login to Registry
+      - task: Docker@2
+        displayName: Build
+        inputs:
+          containerRegistry: $(containerRegistry)
+          repository: $(imageRepository)
+          command: buildAndPush
+          arguments: '--platform linux/amd64'
+          buildContext: '.'
+          Dockerfile: 'Dockerfile'
+          tags: '$(fullVersion)-amd64'
+  - job: BuildArm64
+    displayName: Build ARM64
+    dependsOn:
+      - ExtractVersion
+    variables:
+      fullVersion: $[ dependencies.ExtractVersion.outputs['extractVersion.fullVersion'] ]
+    pool: Default
+    steps:
+      - task: Docker@2
+        inputs:
+          command: login
+          containerRegistry: $(containerRegistry)
+        displayName: Login to Registry
+      - bash: |
+          buildkitd --addr $BUILDKIT_HOST &
+          while ! buildctl debug workers; do sleep 1; done
+        displayName: Run BuildKit
+      - bash: |
+          buildctl build \
+                  --frontend dockerfile.v0 \
+                  --local context=. \
+                  --local dockerfile=. \
+                  --output type=image,name=$(imageRepository):$(fullVersion)-arm64,push=true \
+                  --opt platform=linux/arm64
+        displayName: Build and Push

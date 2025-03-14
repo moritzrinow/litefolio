@@ -1,0 +1,80 @@
+name: 'Alice Johnson'
+
+email: 'alice.johnson@devmail.com'
+
+title: |
+  Backend Developer & Cloud Architect
+
+subtitle: |
+  Designing scalable backend solutions with cloud-native technologies.
+
+description: 'Alice Johnson, Backend Developer & Cloud Architect, USA, Email: alice.johnson@devmail.com, Python, Django, AWS, Terraform, PostgreSQL, Kubernetes.&#xA;'
+
+aboutMe: |
+  <p>
+    I specialize in building scalable backend systems and designing cloud architectures. 
+    Passionate about automation, DevOps, and delivering high-performance applications.
+  </p>
+
+contactDescription: |
+  <p>
+    Let's collaborate! Looking for a backend developer? Reach out to me.
+  </p>
+
+blogUrl: 'https://blog.alicejohnson.dev'
+
+pictureUrl: 'assets/example-picture.jpg'
+
+faviconUrl: 'https://static.alicejohnson.dev/favicon.png'
+
+accentColor: oklch(0.785 0.2 250)
+
+style: |
+  @layer theme {
+    :root, :host {
+    }
+  }
+
+skills:
+  - name: Python
+    logo: 'assets/logo/python.png'
+  - name: Django
+    logo: 'assets/logo/django.png'
+  - name: PostgreSQL
+    logo: 'assets/logo/pg.png'
+  - name: AWS
+    logo: 'assets/logo/aws.png'
+  - name: Terraform
+    logo: 'assets/logo/tf.png'
+  - name: Kubernetes
+    logo: 'assets/logo/k8s.png'
+  - name: Docker
+    logo: 'assets/logo/docker.png'
+
+socials:
+  - name: github
+    url: 'https://github.com/alicejohnson'
+  - name: linkedin
+    url: 'https://linkedin.com/in/alicejohnson'
+  - name: x
+    url: 'https://twitter.com/alicejdev'
+  - name: email
+    url: 'mailto:alice.johnson@devmail.com'
+
+experience:
+  - title: 'Senior Backend Engineer'
+    company: 'CloudSoft Inc.'
+    companyUrl: 'https://cloudsoft.io'
+    period: '2021 - Present'
+    description: |
+      <p>
+        Building highly available microservices and cloud-native applications using AWS and Kubernetes.
+      </p>
+  - title: 'Software Engineer'
+    company: 'TechNova'
+    companyUrl: 'https://technova.com'
+    period: '2018 - 2021'
+    description: |
+      <p>
+        Developed and optimized RESTful APIs and database architectures for enterprise applications.
+      </p>

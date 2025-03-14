@@ -1,0 +1,23 @@
+<footer class="bg-dark-secondary py-8">
+  <div class="container mx-auto px-6 text-center">
+    <div class="flex justify-center space-x-6 mb-4">
+      {{ range .P.Socials }} {{ template "social.html" . }} {{ end }}
+    </div>
+    <div id="copyright">
+      <p class="text-gray-400 text-tiny">
+        © {{ year }} {{ .P.Name }}. All rights reserved.
+      </p>
+      {{ if eq .C.CreditProject true }}
+      <p class="text-gray-400 text-tiny">
+        Built with
+        <a
+          class="underline"
+          href="https://github.com/moritzrinow/litefolio"
+          target="_blank"
+          >Litefolio</a
+        >
+      </p>
+      {{ end }}
+    </div>
+  </div>
+</footer>

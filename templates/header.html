@@ -1,0 +1,64 @@
+<nav class="fixed w-full bg-dark-secondary shadow-lg z-50">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div class="text-2xl font-bold text-accent">
+        <a href="/">{{ .P.Name }}</a>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-accent transition-colors">About</a>
+        <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-accent transition-colors"
+          >Experience</a
+        >
+        <a href="#contact" class="hover:text-accent transition-colors"
+          >Contact</a
+        >
+        {{ if ne .P.BlogUrl "" }}
+        <a
+          href="{{ .P.BlogUrl }}"
+          target="_blank"
+          class="hover:text-accent transition-colors"
+          >Blog</a
+        >
+        {{ end }}
+      </div>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex flex-col bg-dark-secondary py-4 text-center"
+  >
+    <a href="#about" class="block py-2 hover:text-accent transition-colors"
+      >About</a
+    >
+    <a href="#skills" class="block py-2 hover:text-accent transition-colors"
+      >Skills</a
+    >
+    <a href="#experience" class="block py-2 hover:text-accent transition-colors"
+      >Experience</a
+    >
+    <a href="#contact" class="block py-2 hover:text-accent transition-colors"
+      >Contact</a
+    >
+    {{ if ne .P.BlogUrl "" }}
+    <a
+      href="{{ .P.BlogUrl }}"
+      target="_blank"
+      class="block py-2 hover:text-accent transition-colors"
+      >Blog</a
+    >
+    {{ end }}
+  </div>
+</nav>
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    var menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  });
+</script>

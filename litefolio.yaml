@@ -1,0 +1,42 @@
+# IP and port the server binds to
+#address: '0.0.0.0:8080'
+
+# Base-URL, must not end with '/'
+#baseUrl: '/custom-base'
+
+# Uncomment to enable SMTP for the contact-form (instead of opening 'mailto' link)
+#smtpEnabled: true
+
+# SMTP server hostname
+#smtpHost: smtp.server.com
+
+# SMTP port (default is 587)
+#smtpPort: 587
+
+# Sender email address of your contact-form
+#smtpFrom: contact@me.com
+
+# SMTP username (LF_SMTP_USER env)
+#smtpUser: username
+
+# SMTP password (LF_SMTP_PASSWORD env)
+#smtpPassword: password
+
+# Disabling Turnstile is not recommended in production as it makes you vulnerable to spam
+#turnstileDisabled: false 
+
+# Turnstile Site-Key (LF_TURNSTILE_SITE_KEY env)
+#turnstileSiteKey: turnstile-site-key
+
+# Turnstile Secret-Key (LF_TURNSTILE_SECRET_KEY env)
+#turnstileSecretKey: turnstile-secret-key
+
+# Uncomment if you want to credit the project (adds tiny 'Built with Litefolio' link in the footer)
+#creditProject: true
+
+# Custom HTML in <head>
+#head: |
+#  <meta></meta>
+
+# Configure the max. message length in the contact-form
+#maxMessageLength: 4096

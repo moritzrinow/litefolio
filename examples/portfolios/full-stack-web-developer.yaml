@@ -1,0 +1,80 @@
+name: 'Carlos Mendes'
+
+email: 'carlos.mendes@example.com'
+
+title: |
+  Full Stack Web Developer
+
+subtitle: |
+  Crafting beautiful frontends & powerful backends.
+
+description: 'Carlos Mendes, Full Stack Web Developer, Brazil, Email: carlos.mendes@techmail.com, JavaScript, React, Node.js, GraphQL, MongoDB, Next.js, Tailwind CSS.&#xA;'
+
+aboutMe: |
+  <p>
+    I'm a passionate full-stack developer with a love for modern web technologies.
+    Focused on creating performant, maintainable, and scalable web applications.
+  </p>
+
+contactDescription: |
+  <p>
+    Want to build something amazing? Let's talk.
+  </p>
+
+blogUrl: 'https://carlosmendes.dev'
+
+pictureUrl: 'assets/example-picture.jpg'
+
+faviconUrl: 'https://static.carlosmendes.dev/favicon.png'
+
+accentColor: oklch(0.8 0.25 120)
+
+style: |
+  @layer theme {
+    :root, :host {
+    }
+  }
+
+skills:
+  - name: JavaScript
+    logo: 'assets/logo/js.png'
+  - name: React
+    logo: 'assets/logo/react.png'
+  - name: Next.js
+    logo: 'assets/logo/nextjs.png'
+  - name: Node.js
+    logo: 'assets/logo/nodejs.svg'
+  - name: GraphQL
+    logo: 'assets/logo/graphql.png'
+  - name: MongoDB
+    logo: 'assets/logo/mongodb.png'
+  - name: Tailwind CSS
+    logo: 'assets/logo/tailwind.png'
+
+socials:
+  - name: github
+    url: 'https://github.com/carlosmendes'
+  - name: linkedin
+    url: 'https://linkedin.com/in/carlosmendes'
+  - name: x 
+    url: 'https://twitter.com/carlosmdev'
+  - name: email
+    url: 'mailto:carlos.mendes@example.com'
+
+experience:
+  - title: 'Full Stack Developer'
+    company: 'DevHub'
+    companyUrl: 'https://devhub.com'
+    period: '2020 - Present'
+    description: |
+      <p>
+        Building modern web applications using React, Next.js, and Node.js.
+      </p>
+  - title: 'Frontend Engineer'
+    company: 'CodeWorks'
+    companyUrl: 'https://codeworks.io'
+    period: '2017 - 2020'
+    description: |
+      <p>
+        Focused on frontend development with React and state management solutions.
+      </p>

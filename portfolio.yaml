@@ -1,0 +1,101 @@
+name: 'John Doe'
+
+email: 'johndoe@example.com'
+
+#phone: '+49 176 16161616'
+
+title: |
+  Full Stack Software Engineer
+
+subtitle: |
+  Building applications with passion.
+
+description: 'John Doe - Full Stack Software Engineer - Building applications with passion.'
+
+# Content of the 'About Me' section. Supports HTML.
+aboutMe: |
+  <p>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  </p>
+
+# Description of the 'Contact' section. Supports HTML.
+contactDescription: |
+  <p>
+    You need help with a project? You are hiring? <b>Contact me.</b>
+  </p>
+
+# Use this to display a link to your blog in the top nav
+#blogUrl: 'https://dev.to/your-username'
+
+# Link to your profile picture
+pictureUrl: 'assets/example-picture.jpg'
+
+# Link to your favicon
+#faviconUrl: 'assets/favicon.png'
+
+# The main accent color. Supports CSS.
+accentColor: oklch(0.769 0.188 70.08)
+
+# Additional styles. Supports CSS.
+style: |
+  @layer theme {
+    :root, :host {
+    }
+  }
+
+# Your skills and technologies
+skills:
+  - name: Kubernetes
+    logo: 'assets/logo/k8s.png'
+  - name: Terraform
+    logo: 'assets/logo/tf.png'
+  # - name: '.NET'
+  #   logo: 'assets/logo/dotnet.png'
+  # - name: 'ASP.NET'
+  #   logo: 'assets/logo/dotnet.png'
+  # - name: 'EF'
+  #   logo: 'assets/logo/dotnet.png'
+  # - name: 'Blazor'
+  #   logo: 'assets/logo/blazor.png'
+  - name: 'PostgreSQL'
+    logo: 'assets/logo/pg.png'
+  # - name: 'SQL Server'
+  #   logo: 'assets/logo/sqlserver.png'
+  - name: 'Go'
+    logo: 'assets/logo/go.png'
+  # - name: 'Kafka'
+  #   logo: 'assets/logo/kafka.png'
+  # - name: 'Azure'
+  #   logo: 'assets/logo/azure.png'
+  # - name: 'Hetzner'
+  #   logo: 'assets/logo/hetzner.png'
+
+socials:
+  - name: github
+    url: 'https://github.com/your-profile'
+  - name: linkedin
+    url: 'https://linkedin.com/in/your-profile'
+  - name: xing
+    url: 'https://www.xing.com/profile/your-profile'
+  - name: dev
+    url: 'https://dev.to/your-profile'
+  - name: email
+    url: 'mailto:johndoe@example.com'
+
+experience:
+  - title: 'Senior Software Engineer'
+    company: 'Cloudflare'
+    companyUrl: 'https://cloudflare.com'
+    period: '2022 - Present'
+    description: |
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+  - title: 'Junior Software Engineer'
+    company: 'Google'
+    companyUrl: 'https://google.com'
+    period: '2020 - 2022 (3 yrs)'
+    description: |
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
